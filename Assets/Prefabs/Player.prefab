@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23403547887741856}
   - component: {fileID: 114223439694063438}
   m_Layer: 8
-  m_Name: Quad (3)
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 23921880186709556}
   - component: {fileID: 114344407455966936}
   m_Layer: 8
-  m_Name: Quad (1)
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 23137651152989746}
   - component: {fileID: 114001115387809972}
   m_Layer: 8
-  m_Name: Quad (4)
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 23227418634116584}
   - component: {fileID: 114042981274294582}
   m_Layer: 8
-  m_Name: Quad (5)
+  m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 23642555588676064}
   - component: {fileID: 114514848639339874}
   m_Layer: 8
-  m_Name: Quad (6)
+  m_Name: Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 23224962225177042}
   - component: {fileID: 114980044076866970}
   m_Layer: 8
-  m_Name: Quad (2)
+  m_Name: Front
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,7 +208,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1407904553650942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4015453362072746}
