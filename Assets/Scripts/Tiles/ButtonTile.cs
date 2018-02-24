@@ -7,10 +7,23 @@ public class ButtonTile : Tile {
 	[SerializeField] CubeSideType TriggerCubeSideType;
 	[SerializeField] Triggerable Triggerable;
 
+	[Header("Sounds")]
+	[SerializeField] AudioClip TriggerSound;
+	[SerializeField] AudioClip WrongColorSound;
+
+	private AudioSource audioSource;
+
+	void Start() {
+		audioSource = GetComponent<AudioSource>();
+	}
+
   public override void Trigger(CubeSideType cubeSideType) {
 		if (TriggerCubeSideType == cubeSideType) {
+			audioSource.PlayOneShot(TriggerSound);
 			Triggerable.Trigger();
-    }
+    } else {
+			audioSource.PlayOneShot(WrongColorSound);
+		}
 	}
 
 	void OnDrawGizmos() {

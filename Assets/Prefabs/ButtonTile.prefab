@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114810116168227052}
   - component: {fileID: 114234538681607998}
   - component: {fileID: 114366459505643126}
+  - component: {fileID: 82592274589128270}
   m_Layer: 9
   m_Name: ButtonTile
   m_TagString: Untagged
@@ -69,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1212625468225032}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: -0.1, z: 0}
+  m_LocalPosition: {x: 1, y: -0.1, z: 3}
   m_LocalScale: {x: 0.99, y: 0.2, z: 0.99}
   m_Children:
   - {fileID: 4076773140001626}
@@ -90,7 +91,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: d8f5bffc37981c542b777b1073d2c815, type: 2}
+  - {fileID: 2100000, guid: 37e4366000ff52e40a84a9493f7c1bc5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -170,6 +171,87 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!82 &82592274589128270
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1212625468225032}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243923596492804394, guid: 0c141aeabb2aa0d40a1e6b719db9fd55,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114234538681607998
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -193,9 +275,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3204ea04b916964495862c26b829b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TriggerCubeSideType: {fileID: 11400000, guid: d63d765096312b94dabbe86106f86a16,
+  TriggerCubeSideType: {fileID: 11400000, guid: 05944ea6a1075934789f4a486da167d8,
     type: 2}
   Triggerable: {fileID: 0}
+  TriggerSound: {fileID: 8300000, guid: 83b2c12eb9d13f942a470f0181133894, type: 3}
+  WrongColorSound: {fileID: 8300000, guid: 215e008a3d16d3a46b4537c6cee777b4, type: 3}
 --- !u!114 &114810116168227052
 MonoBehaviour:
   m_ObjectHideFlags: 1
