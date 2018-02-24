@@ -26,6 +26,14 @@ public class ButtonTile : Tile {
 			Gizmos.DrawCube(Triggerable.transform.position, new Vector3(1f,1f,1f));
 			Gizmos.DrawRay(Triggerable.transform.position, Vector3.up);
 		}
+	}
 
+	void OnValidate() {
+		MeshRenderer button = transform.GetChild(0).GetComponent<MeshRenderer>();
+		if (TriggerCubeSideType != null) {
+			button.material = TriggerCubeSideType.material;
+		} else {
+			button.material = null;
+		}
 	}
 }
