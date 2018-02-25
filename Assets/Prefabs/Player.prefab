@@ -682,7 +682,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e75e622fbbdc92042899fe2efa310bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SnapGridConfiguration: {fileID: 0}
+  SnapGridConfiguration: {fileID: 11400000, guid: d6154c8a8b8610647a615810696442e7,
+    type: 2}
 --- !u!114 &114980044076866970
 MonoBehaviour:
   m_ObjectHideFlags: 1

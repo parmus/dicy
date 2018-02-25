@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TriggerColor: {fileID: 0}
-  Triggerable: {fileID: 0}
+  Triggerables: []
   Indicator: {fileID: 23469890848027878}
   TriggerSound: {fileID: 8300000, guid: 83b2c12eb9d13f942a470f0181133894, type: 3}
   WrongColorSound: {fileID: 8300000, guid: 215e008a3d16d3a46b4537c6cee777b4, type: 3}

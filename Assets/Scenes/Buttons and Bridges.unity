@@ -403,6 +403,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 540191161}
     m_Modifications:
+    - target: {fileID: 114028527098834678, guid: 0f8d90bb9f2b12e4d857b5ee34272604,
+        type: 2}
+      propertyPath: Triggerables.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4777857140713068, guid: 0f8d90bb9f2b12e4d857b5ee34272604, type: 2}
       propertyPath: m_LocalPosition.x
       value: 1
@@ -461,6 +466,11 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 01ed62f9f4d21524fa5da320df3e3677,
         type: 2}
+    - target: {fileID: 114028527098834678, guid: 0f8d90bb9f2b12e4d857b5ee34272604,
+        type: 2}
+      propertyPath: Triggerables.Array.data[0]
+      value: 
+      objectReference: {fileID: 1927114605}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f8d90bb9f2b12e4d857b5ee34272604, type: 2}
   m_IsPrefabParent: 0
