@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Level 1.unity
+    path: Assets/Scenes/Basic Movement.unity
+    guid: 9190c4dd575968b46a29aa6d4b528680
+  - enabled: 1
+    path: Assets/Scenes/Walls.unity
+    guid: 9a30c0b22be553d4995c7a50c7bca8ed
+  - enabled: 1
+    path: Assets/Scenes/Buttons and doors.unity
+    guid: 4effb1eef31ec184b9e7575cffab095e
+  - enabled: 1
+    path: Assets/Scenes/Let The Right One In.unity
+    guid: 35d1fcf1a7b04e24a8547487a05e3860
+  - enabled: 1
+    path: Assets/Scenes/More doors.unity
     guid: e4174c143bd994145a59bca811d11379
   - enabled: 1
-    path: Assets/Scenes/Level 2.unity
+    path: Assets/Scenes/Basic traps.unity
+    guid: a8c27c00958a9c04a9de11f97869f5a2
+  - enabled: 1
+    path: Assets/Scenes/Round and round.unity
     guid: 66be8444ba4e2da47a6b48f0dbcd253b
