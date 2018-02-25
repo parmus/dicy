@@ -705,7 +705,7 @@ Prefab:
         type: 2}
       propertyPath: Triggerables.Array.data[0]
       value: 
-      objectReference: {fileID: 1268741344}
+      objectReference: {fileID: 331356223}
     - target: {fileID: 114028527098834678, guid: 0f8d90bb9f2b12e4d857b5ee34272604,
         type: 2}
       propertyPath: Triggerables.Array.data[1]
