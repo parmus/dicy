@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Basic Movement.unity
     guid: 9190c4dd575968b46a29aa6d4b528680
   - enabled: 1
-    path: Assets/Scenes/Walls.unity
-    guid: 9a30c0b22be553d4995c7a50c7bca8ed
-  - enabled: 1
     path: Assets/Scenes/Buttons and doors.unity
     guid: 4effb1eef31ec184b9e7575cffab095e
   - enabled: 1

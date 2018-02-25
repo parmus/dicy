@@ -9,7 +9,6 @@ public class Player : MonoBehaviour {
 
 	static int CUBE_LAYER_MASK = 1 << 8;
 	static int WALKABLE_LAYER_MASK = 1 << 9;
-	static int BLOCKING_LAYER_MASK = 1 << 10;
 
 	private bool moving = false;
 
@@ -65,11 +64,6 @@ public class Player : MonoBehaviour {
 	}
 
 	private bool isLegalMove(Vector3 moveDirection) {
-		// TODO: Check for blocking
-		if (Physics.Raycast(Cube.transform.position, moveDirection, 1f, BLOCKING_LAYER_MASK)){
-			return false;
-		}
-
 		return Physics.Raycast(Cube.transform.position + moveDirection, Vector3.down, 1f, WALKABLE_LAYER_MASK);
 	}
 
