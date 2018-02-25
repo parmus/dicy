@@ -58,7 +58,7 @@ public class Player : MonoBehaviour {
 		Cube.transform.localPosition = savedCubePosition;
 
 		// TODO: Trigger tile below
-		triggerTileBelow();
+		enterTile();
 
 		moving = false;
 	}
@@ -75,14 +75,14 @@ public class Player : MonoBehaviour {
 		return null;
 	}
 
-	private void triggerTileBelow(){
+	private void enterTile(){
 		CubeSide bottomSide = getCubeSide(Vector3.down);
 
 		RaycastHit raycastHit;
 		if (Physics.Raycast(Cube.transform.position, Vector3.down, out raycastHit, 1f, WALKABLE_LAYER_MASK)) {
 			Tile tile = raycastHit.collider.gameObject.GetComponent<Tile>();
 			if (tile != null) {
-				tile.Trigger(bottomSide.CubeSideType);
+				tile.Enter(bottomSide.CubeSideType);
 			}
 		}
 	

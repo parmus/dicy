@@ -18,7 +18,7 @@ public class ButtonTile : Tile {
 		audioSource = GetComponent<AudioSource>();
 	}
 
-  public override void Trigger(CubeSideType cubeSideType) {
+	public override void Enter(CubeSideType cubeSideType) {
 		if (TriggerCubeSideType == cubeSideType) {
 			audioSource.PlayOneShot(TriggerSound);
 			Triggerable.Trigger();

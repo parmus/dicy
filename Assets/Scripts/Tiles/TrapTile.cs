@@ -8,7 +8,7 @@ public class TrapTile : Tile {
 	[SerializeField] CubeSideType TrapColor;
 	[SerializeField] ParticleSystem Skulls;
 
-    public override void Trigger(CubeSideType cubeSideType) {
+    public override void Enter(CubeSideType cubeSideType) {
 		if (cubeSideType == TrapColor) {
 			Debug.Log("Player died!");
 			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

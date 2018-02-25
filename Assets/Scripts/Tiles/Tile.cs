@@ -3,5 +3,5 @@ using System.Collections.Generic;
 using UnityEngine;
 
 abstract public class Tile : MonoBehaviour {
-	abstract public void Trigger(CubeSideType cubeSideType);
+	virtual public void Enter(CubeSideType cubeSideType) {}
 }
