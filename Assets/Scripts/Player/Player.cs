@@ -33,7 +33,6 @@ public class Player : MonoBehaviour {
     }
 
 	public void LevelComplete() {
-	    // TODO: Win animation?
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
