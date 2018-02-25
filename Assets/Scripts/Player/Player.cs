@@ -119,13 +119,13 @@ public class Player : MonoBehaviour {
 		transform.localPosition = transform.localPosition + moveDirection;
 		Cube.transform.localPosition = savedCubePosition;
 
+		moving = false;
+
 		// Enter tile below
 		Tile enteringTile = getTileBelow();
 		if (enteringTile != null) {
 			enteringTile.Enter(this);
 		}
-
-		moving = false;
 	}
 
 	private bool isLegalMove(Vector3 moveDirection) {
