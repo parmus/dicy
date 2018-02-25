@@ -58,6 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4332156059740640}
   - component: {fileID: 114041190253473988}
+  - component: {fileID: 114940183990244444}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -208,7 +209,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1407904553650942}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4015453362072746}
@@ -670,6 +671,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CubeSideType: {fileID: 11400000, guid: d63d765096312b94dabbe86106f86a16, type: 2}
+--- !u!114 &114940183990244444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1407904553650942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75e622fbbdc92042899fe2efa310bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SnapGridConfiguration: {fileID: 11400000, guid: 3c2972def3c793f41a18088339e045b5,
+    type: 2}
 --- !u!114 &114980044076866970
 MonoBehaviour:
   m_ObjectHideFlags: 1
