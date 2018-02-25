@@ -7,10 +7,16 @@ public class Player : MonoBehaviour {
 	[SerializeField][Range(0.1f, 1f)] float RotationSpeed = 0.3f;
 	[SerializeField] GameObject Cube;
 
+	[Header("Electricution")]
+	[SerializeField] AudioClip ElectricutionSound;
+	[SerializeField] GameObject ElectricutionVFX;
+	[SerializeField][Range(0.01f, 0.1f)] float ElectricutionShake = 0.05f;
+
 	static int CUBE_LAYER_MASK = 1 << 8;
 	static int WALKABLE_LAYER_MASK = 1 << 9;
 
 	private bool moving = false;
+	private AudioSource audioSource;
 
     public CubeColor BottomColor {
         get {
@@ -31,9 +37,17 @@ public class Player : MonoBehaviour {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 
-	public void Kill() {
+	public void RestartLevel() {
 		Debug.Log("Player died!");
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+	}
+
+	public void Electricte() {
+		StartCoroutine(IElectricute());
+	}
+
+	void Start() {
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	void Update () {
@@ -48,6 +62,31 @@ public class Player : MonoBehaviour {
 				StartCoroutine(IMove(Vector3.right));
 			}
 		}
+	}
+
+	private IEnumerator IElectricute() {
+		moving = true;
+		float duration = ElectricutionSound.length;
+		audioSource.PlayOneShot(ElectricutionSound);
+		ElectricutionVFX.SetActive(true);
+
+		Vector3 startPos = Cube.transform.localPosition;
+
+		float elapsed_time = 0;
+		while(elapsed_time < duration) {
+			elapsed_time += Time.deltaTime;
+
+			Vector3 offset = new Vector3(
+				Random.Range(-ElectricutionShake, ElectricutionShake),
+				Random.Range(0, ElectricutionShake),
+				Random.Range(ElectricutionShake, ElectricutionShake)
+			);
+			Cube.transform.localPosition = startPos + offset;
+
+			yield return new WaitForEndOfFrame();
+		}
+
+		RestartLevel();
 	}
 
 	private IEnumerator IMove(Vector3 moveDirection){

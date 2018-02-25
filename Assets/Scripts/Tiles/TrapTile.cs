@@ -7,7 +7,7 @@ public class TrapTile : Tile {
 
     public override void Enter(Player player) {
 		if (player.BottomColor == TrapColor) {
-			player.Kill();
+			player.Electricte();
 		}
     }
 
