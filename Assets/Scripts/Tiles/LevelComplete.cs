@@ -1,12 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class LevelComplete : Tile {
-    public override void Enter(CubeSideType cubeSideType) {
+    public override void Enter(Player player) {
   		Debug.Log("Win!");
-        // TODO: Win animation?
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        player.LevelComplete();
     }
 }

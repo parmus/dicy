@@ -409,6 +409,12 @@ Prefab:
       propertyPath: Triggerable
       value: 
       objectReference: {fileID: 1071462198}
+    - target: {fileID: 114028527098834678, guid: 0f8d90bb9f2b12e4d857b5ee34272604,
+        type: 2}
+      propertyPath: TriggerColor
+      value: 
+      objectReference: {fileID: 11400000, guid: d63d765096312b94dabbe86106f86a16,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f8d90bb9f2b12e4d857b5ee34272604, type: 2}
   m_IsPrefabParent: 0

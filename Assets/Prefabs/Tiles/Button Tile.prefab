@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3204ea04b916964495862c26b829b9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TriggerCubeSideType: {fileID: 0}
+  TriggerColor: {fileID: 0}
   Triggerable: {fileID: 0}
   Indicator: {fileID: 23469890848027878}
   TriggerSound: {fileID: 8300000, guid: 83b2c12eb9d13f942a470f0181133894, type: 3}

@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -11,6 +11,30 @@ public class Player : MonoBehaviour {
 	static int WALKABLE_LAYER_MASK = 1 << 9;
 
 	private bool moving = false;
+
+    public CubeColor BottomColor {
+        get {
+            RaycastHit raycastHit;
+            if (Physics.Raycast(Cube.transform.position, Vector3.down, out raycastHit, 1f, CUBE_LAYER_MASK)) {
+                CubeSide cubeSide = raycastHit.collider.gameObject.GetComponent<CubeSide>();
+                if (cubeSide != null) {
+                    return cubeSide.CubeColor;
+                }
+            }
+            Debug.LogError("No bottom side found -> This really should never happen!");
+            throw new NoBottomSideFound();
+        }
+    }
+
+	public void LevelComplete() {
+	    // TODO: Win animation?
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+	}
+
+	public void Kill() {
+		Debug.Log("Player died!");
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+	}
 
 	void Update () {
 		if (!moving){
@@ -57,8 +81,11 @@ public class Player : MonoBehaviour {
 		transform.localPosition = transform.localPosition + moveDirection;
 		Cube.transform.localPosition = savedCubePosition;
 
-		// TODO: Trigger tile below
-		enterTile();
+		// Enter tile below
+		Tile enteringTile = getTileBelow();
+		if (enteringTile != null) {
+			enteringTile.Enter(this);
+		}
 
 		moving = false;
 	}
@@ -67,24 +94,14 @@ public class Player : MonoBehaviour {
 		return Physics.Raycast(Cube.transform.position + moveDirection, Vector3.down, 1f, WALKABLE_LAYER_MASK);
 	}
 
-	private CubeSide getCubeSide(Vector3 direction) {
+    private Tile getTileBelow() {
 		RaycastHit raycastHit;
-		if (Physics.Raycast(Cube.transform.position, direction, out raycastHit, 1f, CUBE_LAYER_MASK)) {
-			return raycastHit.collider.gameObject.GetComponent<CubeSide>();
+		if (Physics.Raycast(Cube.transform.position, Vector3.down, out raycastHit, 1f, WALKABLE_LAYER_MASK)) {
+			return raycastHit.collider.gameObject.GetComponent<Tile>();
 		}
 		return null;
 	}
 
-	private void enterTile(){
-		CubeSide bottomSide = getCubeSide(Vector3.down);
-
-		RaycastHit raycastHit;
-		if (Physics.Raycast(Cube.transform.position, Vector3.down, out raycastHit, 1f, WALKABLE_LAYER_MASK)) {
-			Tile tile = raycastHit.collider.gameObject.GetComponent<Tile>();
-			if (tile != null) {
-				tile.Enter(bottomSide.CubeSideType);
-			}
-		}
-	
-	}
+	[System.Serializable()]
+	public class NoBottomSideFound : System.Exception {}
 }

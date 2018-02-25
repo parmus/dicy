@@ -609,7 +609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09f9a6f79c9efe429adb899d1d7a507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CubeSideType: {fileID: 11400000, guid: 01ed62f9f4d21524fa5da320df3e3677, type: 2}
+  CubeColor: {fileID: 11400000, guid: 01ed62f9f4d21524fa5da320df3e3677, type: 2}
 --- !u!114 &114041190253473988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09f9a6f79c9efe429adb899d1d7a507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CubeSideType: {fileID: 11400000, guid: d63d765096312b94dabbe86106f86a16, type: 2}
+  CubeColor: {fileID: 11400000, guid: d63d765096312b94dabbe86106f86a16, type: 2}
 --- !u!114 &114223439694063438
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -646,7 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09f9a6f79c9efe429adb899d1d7a507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CubeSideType: {fileID: 11400000, guid: 01ed62f9f4d21524fa5da320df3e3677, type: 2}
+  CubeColor: {fileID: 11400000, guid: 01ed62f9f4d21524fa5da320df3e3677, type: 2}
 --- !u!114 &114344407455966936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09f9a6f79c9efe429adb899d1d7a507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CubeSideType: {fileID: 11400000, guid: 05944ea6a1075934789f4a486da167d8, type: 2}
+  CubeColor: {fileID: 11400000, guid: 05944ea6a1075934789f4a486da167d8, type: 2}
 --- !u!114 &114514848639339874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -670,7 +670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09f9a6f79c9efe429adb899d1d7a507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CubeSideType: {fileID: 11400000, guid: d63d765096312b94dabbe86106f86a16, type: 2}
+  CubeColor: {fileID: 11400000, guid: d63d765096312b94dabbe86106f86a16, type: 2}
 --- !u!114 &114940183990244444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -694,4 +694,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09f9a6f79c9efe429adb899d1d7a507, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CubeSideType: {fileID: 11400000, guid: 05944ea6a1075934789f4a486da167d8, type: 2}
+  CubeColor: {fileID: 11400000, guid: 05944ea6a1075934789f4a486da167d8, type: 2}

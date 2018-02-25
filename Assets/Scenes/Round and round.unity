@@ -260,7 +260,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1737365042777106, guid: 4c27901c4087a9c46b3d99ea5a959160, type: 2}
       propertyPath: m_Name
-      value: Trap (-2, 1)
+      value: Trap Tile (-2, 1)
       objectReference: {fileID: 0}
     - target: {fileID: 114825240245985918, guid: 4c27901c4087a9c46b3d99ea5a959160,
         type: 2}
@@ -324,12 +324,18 @@ Prefab:
         type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 37e4366000ff52e40a84a9493f7c1bc5, type: 2}
+      objectReference: {fileID: 2100000, guid: d8f5bffc37981c542b777b1073d2c815, type: 2}
     - target: {fileID: 114028527098834678, guid: 0f8d90bb9f2b12e4d857b5ee34272604,
         type: 2}
       propertyPath: Triggerable
       value: 
       objectReference: {fileID: 906277735}
+    - target: {fileID: 114028527098834678, guid: 0f8d90bb9f2b12e4d857b5ee34272604,
+        type: 2}
+      propertyPath: TriggerColor
+      value: 
+      objectReference: {fileID: 11400000, guid: d63d765096312b94dabbe86106f86a16,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f8d90bb9f2b12e4d857b5ee34272604, type: 2}
   m_IsPrefabParent: 0
@@ -406,7 +412,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4174481764415002, guid: 7f558785ad5b95f4193b381aec1eab05, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4174481764415002, guid: 7f558785ad5b95f4193b381aec1eab05, type: 2}
       propertyPath: m_LocalRotation.y
@@ -414,7 +420,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4174481764415002, guid: 7f558785ad5b95f4193b381aec1eab05, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4174481764415002, guid: 7f558785ad5b95f4193b381aec1eab05, type: 2}
       propertyPath: m_LocalRotation.w
@@ -537,7 +543,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1737365042777106, guid: 4c27901c4087a9c46b3d99ea5a959160, type: 2}
       propertyPath: m_Name
-      value: Trap (-1, 2)
+      value: Trap Tile (-1, 2)
       objectReference: {fileID: 0}
     - target: {fileID: 114825240245985918, guid: 4c27901c4087a9c46b3d99ea5a959160,
         type: 2}
@@ -715,6 +721,12 @@ Prefab:
       propertyPath: Triggerable
       value: 
       objectReference: {fileID: 1692962316}
+    - target: {fileID: 114028527098834678, guid: 0f8d90bb9f2b12e4d857b5ee34272604,
+        type: 2}
+      propertyPath: TriggerColor
+      value: 
+      objectReference: {fileID: 11400000, guid: 05944ea6a1075934789f4a486da167d8,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f8d90bb9f2b12e4d857b5ee34272604, type: 2}
   m_IsPrefabParent: 0
@@ -744,15 +756,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4174481764415002, guid: 7f558785ad5b95f4193b381aec1eab05, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4174481764415002, guid: 7f558785ad5b95f4193b381aec1eab05, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4174481764415002, guid: 7f558785ad5b95f4193b381aec1eab05, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4174481764415002, guid: 7f558785ad5b95f4193b381aec1eab05, type: 2}
       propertyPath: m_LocalRotation.w
@@ -821,7 +833,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1737365042777106, guid: 4c27901c4087a9c46b3d99ea5a959160, type: 2}
       propertyPath: m_Name
-      value: Trap (-1, 0)
+      value: Trap Tile (-1, 0)
       objectReference: {fileID: 0}
     - target: {fileID: 114825240245985918, guid: 4c27901c4087a9c46b3d99ea5a959160,
         type: 2}

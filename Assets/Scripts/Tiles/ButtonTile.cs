@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [SelectionBase]
 public class ButtonTile : Tile {
-	[SerializeField] CubeSideType TriggerCubeSideType;
+	[SerializeField] CubeColor TriggerColor;
 	[SerializeField] Triggerable Triggerable;
 	[SerializeField] MeshRenderer Indicator;
 
@@ -18,17 +16,17 @@ public class ButtonTile : Tile {
 		audioSource = GetComponent<AudioSource>();
 	}
 
-	public override void Enter(CubeSideType cubeSideType) {
-		if (TriggerCubeSideType == cubeSideType) {
+	public override void Enter(Player player) {
+		if (player.BottomColor == TriggerColor) {
 			audioSource.PlayOneShot(TriggerSound);
 			Triggerable.Trigger();
-    } else {
+    	} else {
 			audioSource.PlayOneShot(WrongColorSound);
 		}
 	}
 
 	void OnDrawGizmos() {
-		if (TriggerCubeSideType == null || Triggerable == null) {
+		if (TriggerColor == null || Triggerable == null) {
 			Gizmos.color = new Color(1f, 0f, 0f, 0.3f);
 			Gizmos.DrawCube(transform.position, new Vector3(1f,1f,1f));
 		}
@@ -43,8 +41,8 @@ public class ButtonTile : Tile {
 	}
 
 	void OnValidate() {
-		if (TriggerCubeSideType != null) {
-			Indicator.material = TriggerCubeSideType.material;
+		if (TriggerColor != null) {
+			Indicator.material = TriggerColor.material;
 		} else {
 			Indicator.material = null;
 		}

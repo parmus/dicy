@@ -1,17 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 [SelectionBase]
 public class TrapTile : Tile {
-	[SerializeField] CubeSideType TrapColor;
+	[SerializeField] CubeColor TrapColor;
 	[SerializeField] ParticleSystem Skulls;
 
-    public override void Enter(CubeSideType cubeSideType) {
-		if (cubeSideType == TrapColor) {
-			Debug.Log("Player died!");
-			SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    public override void Enter(Player player) {
+		if (player.BottomColor == TrapColor) {
+			player.Kill();
 		}
     }
 
