@@ -6,6 +6,7 @@ using UnityEngine;
 public class ButtonTile : Tile {
 	[SerializeField] CubeSideType TriggerCubeSideType;
 	[SerializeField] Triggerable Triggerable;
+	[SerializeField] MeshRenderer Indicator;
 
 	[Header("Sounds")]
 	[SerializeField] AudioClip TriggerSound;
@@ -42,11 +43,10 @@ public class ButtonTile : Tile {
 	}
 
 	void OnValidate() {
-		MeshRenderer button = transform.GetChild(0).GetComponent<MeshRenderer>();
 		if (TriggerCubeSideType != null) {
-			button.material = TriggerCubeSideType.material;
+			Indicator.material = TriggerCubeSideType.material;
 		} else {
-			button.material = null;
+			Indicator.material = null;
 		}
 	}
 }
