@@ -51,14 +51,12 @@ public class Player : MonoBehaviour {
 
 	void Update () {
 		if (!moving){
-			if (Input.GetKeyDown(KeyCode.W)){
-				StartCoroutine(IMove(Vector3.forward));
-			} else if (Input.GetKeyDown(KeyCode.S)){
-				StartCoroutine(IMove(Vector3.back));
-			} else if (Input.GetKeyDown(KeyCode.A)){
-				StartCoroutine(IMove(Vector3.left));
-			} else if (Input.GetKeyDown(KeyCode.D)){
-				StartCoroutine(IMove(Vector3.right));
+			float horizontal = Input.GetAxisRaw("Horizontal");
+			float vertical = Input.GetAxisRaw("Vertical");
+			if (Mathf.Abs(horizontal) > Mathf.Epsilon) {
+				StartCoroutine(IMove(Vector3.right * Mathf.Sign(horizontal)));
+			} else if (Mathf.Abs(vertical) > Mathf.Epsilon) {
+				StartCoroutine(IMove(Vector3.forward * Mathf.Sign(vertical)));
 			}
 		}
 	}
