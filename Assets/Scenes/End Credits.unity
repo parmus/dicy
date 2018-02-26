@@ -474,7 +474,7 @@ GameObject:
   - component: {fileID: 858971540}
   - component: {fileID: 858971539}
   m_Layer: 0
-  m_Name: Congratulations text
+  m_Name: Congratulations Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
