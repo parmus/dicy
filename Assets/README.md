@@ -1,10 +1,9 @@
 Dicy
 ====
 
+## Future features
+- Desolvable tiles
 
-Prototype steps
----------------
-
-- Which side is up/down?
-- Push a button
-- Model a dice
+## Known issues
+- Player controller queues up movement while in the pause menu
+- Player controller somewhat fragile (moving parameter)
