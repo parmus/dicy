@@ -91,6 +91,11 @@ public class Player : MonoBehaviour {
 
 		moving = true;
 
+		Tile leavingTile = getTileBelow();
+		if (leavingTile != null) {
+			leavingTile.Leave(this);
+		}
+
 		Vector3 rotationAxis = Vector3.Cross(Vector3.up, moveDirection);
 		Vector3 savedCubePosition = Cube.transform.localPosition;
 
