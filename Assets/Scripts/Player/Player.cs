@@ -37,7 +37,6 @@ public class Player : MonoBehaviour {
 	}
 
 	public void RestartLevel() {
-		Debug.Log("Player died!");
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
@@ -50,6 +49,12 @@ public class Player : MonoBehaviour {
 	}
 
 	void Update () {
+#if UNITY_EDITOR
+		if (Input.GetKeyDown(KeyCode.R)) {
+			RestartLevel();
+		}
+#endif
+		
 		if (!moving){
 			float horizontal = Input.GetAxisRaw("Horizontal");
 			float vertical = Input.GetAxisRaw("Vertical");
