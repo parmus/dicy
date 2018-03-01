@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Let The Right One In.unity
     guid: 35d1fcf1a7b04e24a8547487a05e3860
   - enabled: 1
+    path: Assets/Scenes/The World is Fragile.unity
+    guid: b5b83db97721c854b98d522b3ab98186
+  - enabled: 1
     path: Assets/Scenes/More Bridges.unity
     guid: e4174c143bd994145a59bca811d11379
   - enabled: 1
@@ -29,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/All The Bridges.unity
     guid: f04c734fafbd26a4a95565f0908f09b7
+  - enabled: 1
+    path: Assets/Scenes/Planning is Everything.unity
+    guid: 601a702155a9ca646934a16f95f75154
   - enabled: 1
     path: Assets/Scenes/End Credits.unity
     guid: 046839b193584874a8ed65e9cc9e6c7b
