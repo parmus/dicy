@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
 	static int CUBE_LAYER_MASK = 1 << 8;
 	static int WALKABLE_LAYER_MASK = 1 << 9;
 
-	private bool moving = false;
+	private bool canMove = true;
 	private AudioSource audioSource;
 
     public CubeColor BottomColor {
@@ -55,7 +55,7 @@ public class Player : MonoBehaviour {
 		}
 #endif
 		
-		if (!moving){
+		if (canMove){
 			float horizontal = Input.GetAxisRaw("Horizontal");
 			float vertical = Input.GetAxisRaw("Vertical");
 			if (Mathf.Abs(horizontal) > Mathf.Epsilon) {
@@ -67,7 +67,7 @@ public class Player : MonoBehaviour {
 	}
 
 	private IEnumerator IElectricute() {
-		moving = true;
+		canMove = false;
 		float duration = ElectricutionSound.length;
 		audioSource.PlayOneShot(ElectricutionSound);
 		ElectricutionVFX.SetActive(true);
@@ -94,7 +94,7 @@ public class Player : MonoBehaviour {
 	private IEnumerator IMove(Vector3 moveDirection){
 		if (!isLegalMove(moveDirection)) yield break;
 
-		moving = true;
+		canMove = false;
 
 		Tile leavingTile = getTileBelow();
 		if (leavingTile != null) {
@@ -127,13 +127,13 @@ public class Player : MonoBehaviour {
 		transform.localPosition = transform.localPosition + moveDirection;
 		Cube.transform.localPosition = savedCubePosition;
 
-		moving = false;
-
 		// Enter tile below
 		Tile enteringTile = getTileBelow();
 		if (enteringTile != null) {
 			enteringTile.Enter(this);
 		}
+
+		canMove = true;
 	}
 
 	private bool isLegalMove(Vector3 moveDirection) {
