@@ -6,6 +6,7 @@ public class Player : MonoBehaviour {
 
 	[SerializeField][Range(0.1f, 1f)] float RotationSpeed = 0.3f;
 	[SerializeField] GameObject Cube;
+	[SerializeField] float MovementDelay = 0.2f;
 
 	[Header("Electricution")]
 	[SerializeField] AudioClip ElectricutionSound;
@@ -127,13 +128,15 @@ public class Player : MonoBehaviour {
 		transform.localPosition = transform.localPosition + moveDirection;
 		Cube.transform.localPosition = savedCubePosition;
 
+		canMove = true;
+
 		// Enter tile below
 		Tile enteringTile = getTileBelow();
 		if (enteringTile != null) {
 			enteringTile.Enter(this);
 		}
 
-		canMove = true;
+		yield return new WaitForSeconds(MovementDelay);
 	}
 
 	private bool isLegalMove(Vector3 moveDirection) {

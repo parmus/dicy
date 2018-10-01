@@ -736,6 +736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RotationSpeed: 0.13
   Cube: {fileID: 1499489658095668}
+  MovementDelay: 0.2
   ElectricutionSound: {fileID: 8300000, guid: f83a885011455ab41a4a59918988847b, type: 3}
   ElectricutionVFX: {fileID: 1722254467893768}
   ElectricutionShake: 0.0761
