@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4897714786855756}
   - component: {fileID: 65495577129605930}
-  - component: {fileID: 114038043260670694}
   - component: {fileID: 114505846095076464}
   - component: {fileID: 114825240245985918}
   m_Layer: 9
@@ -158,18 +157,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114038043260670694
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1737365042777106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54db803b5f87e5149934ca3119b06766, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Prefix: Trap Tile
 --- !u!114 &114505846095076464
 MonoBehaviour:
   m_ObjectHideFlags: 1

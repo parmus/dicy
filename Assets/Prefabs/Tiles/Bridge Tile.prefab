@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4174481764415002}
   - component: {fileID: 65748132279084318}
-  - component: {fileID: 114213991066273006}
   - component: {fileID: 114863425786442190}
   - component: {fileID: 95463262756366976}
   - component: {fileID: 82782256032090930}
@@ -369,18 +368,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startOpen: 1
---- !u!114 &114213991066273006
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1008488292475078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54db803b5f87e5149934ca3119b06766, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Prefix: Bridge
 --- !u!114 &114863425786442190
 MonoBehaviour:
   m_ObjectHideFlags: 1

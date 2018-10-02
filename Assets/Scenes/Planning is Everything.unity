@@ -200,7 +200,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1203871916326892, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
       propertyPath: m_Name
-      value: Fragile Tile (-3, 4)
+      value: FragileTile (-3, 4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
@@ -308,7 +308,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1563148276372902, guid: b93c0322ca3c7c143b9b0e9fcdda9117, type: 2}
       propertyPath: m_Name
-      value: Level Complete Tile (-3, 1)
+      value: LevelComplete (-3, 1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b93c0322ca3c7c143b9b0e9fcdda9117, type: 2}
@@ -490,7 +490,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1737365042777106, guid: 4c27901c4087a9c46b3d99ea5a959160, type: 2}
       propertyPath: m_Name
-      value: Trap Tile (-3, 3)
+      value: TrapTile (-3, 3)
       objectReference: {fileID: 0}
     - target: {fileID: 114825240245985918, guid: 4c27901c4087a9c46b3d99ea5a959160,
         type: 2}
@@ -552,7 +552,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1203871916326892, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
       propertyPath: m_Name
-      value: Fragile Tile (0, 2)
+      value: FragileTile (0, 2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
@@ -598,7 +598,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1203871916326892, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
       propertyPath: m_Name
-      value: Fragile Tile (-2, 5)
+      value: FragileTile (-2, 5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
@@ -644,7 +644,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1203871916326892, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
       propertyPath: m_Name
-      value: Fragile Tile (-1, 5)
+      value: FragileTile (-1, 5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
@@ -690,7 +690,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1203871916326892, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
       propertyPath: m_Name
-      value: Fragile Tile (-3, 5)
+      value: FragileTile (-3, 5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
@@ -833,7 +833,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1203871916326892, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
       propertyPath: m_Name
-      value: Fragile Tile (0, 5)
+      value: FragileTile (0, 5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
@@ -846,6 +846,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1218913846}
+  - component: {fileID: 1218913847}
   m_Layer: 0
   m_Name: Tiles
   m_TagString: Untagged
@@ -881,6 +882,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1218913847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1218913845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54db803b5f87e5149934ca3119b06766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1522388207 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4986588753044676, guid: f2be437e7adf3684a80363eb96f5cdcb,
@@ -1003,7 +1015,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1203871916326892, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
       propertyPath: m_Name
-      value: Fragile Tile (0, 3)
+      value: FragileTile (0, 3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
@@ -1104,6 +1116,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 223146276010106698, guid: 8d3bf859bcf73fe46b7f0ba3bdf5b574,
+        type: 2}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d3bf859bcf73fe46b7f0ba3bdf5b574, type: 2}
@@ -1206,7 +1223,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1203871916326892, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
       propertyPath: m_Name
-      value: Fragile Tile (0, 1)
+      value: FragileTile (0, 1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
@@ -1252,7 +1269,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1203871916326892, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}
       propertyPath: m_Name
-      value: Fragile Tile (0, 4)
+      value: FragileTile (0, 4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f2be437e7adf3684a80363eb96f5cdcb, type: 2}

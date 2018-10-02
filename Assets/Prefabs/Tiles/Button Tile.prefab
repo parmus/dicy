@@ -37,7 +37,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4777857140713068}
   - component: {fileID: 65495900321640772}
-  - component: {fileID: 114142840465819844}
   - component: {fileID: 114496003937109860}
   - component: {fileID: 114028527098834678}
   - component: {fileID: 82288077274890858}
@@ -297,18 +296,6 @@ MonoBehaviour:
   Indicator: {fileID: 23469890848027878}
   TriggerSound: {fileID: 8300000, guid: 83b2c12eb9d13f942a470f0181133894, type: 3}
   WrongColorSound: {fileID: 8300000, guid: 215e008a3d16d3a46b4537c6cee777b4, type: 3}
---- !u!114 &114142840465819844
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1301351518468722}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54db803b5f87e5149934ca3119b06766, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Prefix: Button Tile
 --- !u!114 &114496003937109860
 MonoBehaviour:
   m_ObjectHideFlags: 1

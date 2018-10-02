@@ -2,9 +2,12 @@
 
 [ExecuteInEditMode]
 public class NameByCoordinates : MonoBehaviour {
-	[SerializeField] string Prefix = "";
-
+#if (UNITY_EDITOR)
 	void LateUpdate () {
-		gameObject.name = System.String.Format("{0} ({1}, {2})", Prefix, transform.position.x, transform.position.z);
+		foreach(Tile tile in GetComponentsInChildren(typeof(Tile))) {
+			string prefix = tile.GetType().Name;
+			tile.gameObject.name = System.String.Format("{0} ({1}, {2})", prefix, tile.transform.position.x, tile.transform.position.z);
+		}
 	}
+#endif
 }

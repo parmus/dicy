@@ -71,7 +71,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4193793164495496}
   - component: {fileID: 65469293573860568}
-  - component: {fileID: 114629151061418900}
   - component: {fileID: 114551590845951000}
   - component: {fileID: 114071640584340428}
   m_Layer: 9
@@ -244,18 +243,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SnapGridConfiguration: {fileID: 11400000, guid: 2592828dab3e80d40b05ac93bac8f6df,
     type: 2}
---- !u!114 &114629151061418900
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1563148276372902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54db803b5f87e5149934ca3119b06766, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Prefix: Level Complete Tile
 --- !u!198 &198073268930547766
 ParticleSystem:
   m_ObjectHideFlags: 1

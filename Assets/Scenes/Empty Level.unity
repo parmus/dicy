@@ -280,7 +280,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1563148276372902, guid: b93c0322ca3c7c143b9b0e9fcdda9117, type: 2}
       propertyPath: m_Name
-      value: Level Complete Tile (1, 0)
+      value: LevelComplete (1, 0)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b93c0322ca3c7c143b9b0e9fcdda9117, type: 2}
@@ -298,6 +298,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1385158576}
+  - component: {fileID: 1385158577}
   m_Layer: 0
   m_Name: Tiles
   m_TagString: Untagged
@@ -320,6 +321,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1385158577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1385158575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54db803b5f87e5149934ca3119b06766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1602349139
 Prefab:
   m_ObjectHideFlags: 0
@@ -509,6 +521,11 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 223146276010106698, guid: 8d3bf859bcf73fe46b7f0ba3bdf5b574,
+        type: 2}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d3bf859bcf73fe46b7f0ba3bdf5b574, type: 2}

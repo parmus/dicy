@@ -172,6 +172,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 198125359}
+  - component: {fileID: 198125360}
   m_Layer: 0
   m_Name: Tiles
   m_TagString: Untagged
@@ -203,6 +204,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &198125360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198125358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54db803b5f87e5149934ca3119b06766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &331356222 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4174481764415002, guid: 7f558785ad5b95f4193b381aec1eab05,
@@ -311,6 +323,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 223146276010106698, guid: 8d3bf859bcf73fe46b7f0ba3bdf5b574,
+        type: 2}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d3bf859bcf73fe46b7f0ba3bdf5b574, type: 2}
   m_IsPrefabParent: 0
@@ -360,7 +377,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1301351518468722, guid: 0f8d90bb9f2b12e4d857b5ee34272604, type: 2}
       propertyPath: m_Name
-      value: Button Tile (1, 0)
+      value: ButtonTile (1, 0)
       objectReference: {fileID: 0}
     - target: {fileID: 114028527098834678, guid: 0f8d90bb9f2b12e4d857b5ee34272604,
         type: 2}
@@ -490,7 +507,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1301351518468722, guid: 0f8d90bb9f2b12e4d857b5ee34272604, type: 2}
       propertyPath: m_Name
-      value: Button Tile (-1, 0)
+      value: ButtonTile (-1, 0)
       objectReference: {fileID: 0}
     - target: {fileID: 114028527098834678, guid: 0f8d90bb9f2b12e4d857b5ee34272604,
         type: 2}
@@ -785,7 +802,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1563148276372902, guid: b93c0322ca3c7c143b9b0e9fcdda9117, type: 2}
       propertyPath: m_Name
-      value: Level Complete Tile (-2, 5)
+      value: LevelComplete (-2, 5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b93c0322ca3c7c143b9b0e9fcdda9117, type: 2}
@@ -893,7 +910,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1301351518468722, guid: 0f8d90bb9f2b12e4d857b5ee34272604, type: 2}
       propertyPath: m_Name
-      value: Button Tile (0, -1)
+      value: ButtonTile (0, -1)
       objectReference: {fileID: 0}
     - target: {fileID: 114028527098834678, guid: 0f8d90bb9f2b12e4d857b5ee34272604,
         type: 2}
