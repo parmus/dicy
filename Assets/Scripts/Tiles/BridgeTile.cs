@@ -7,7 +7,7 @@ public class BridgeTile : Triggerable {
 	private Animator animator;
 
   void Start () {
-		animator = GetComponent<Animator>();
+		animator = GetComponentInChildren<Animator>();
 		animator.SetBool("startOpen", startOpen);
 	}
 
@@ -18,7 +18,7 @@ public class BridgeTile : Triggerable {
 	void OnDrawGizmos() {
 		if (!startOpen) {
 			Gizmos.color = new Color(0, 1, 0, 0.3f);
-			Gizmos.DrawCube(transform.position + Vector3.up * 0.45f, new Vector3(0.99f, 0.1f, 0.99f));
+			Gizmos.DrawCube(transform.position + Vector3.down * 0.05f, new Vector3(0.99f, 0.1f, 0.99f));
 		}
 	}
 }

@@ -14,7 +14,7 @@ public class TrapTile : Tile {
 	void OnDrawGizmos() {
 		if (TrapColor == null) {
 			Gizmos.color = new Color(1f, 0f, 0f, 0.3f);
-			Gizmos.DrawCube(transform.position, new Vector3(1f,1f,1f));
+			Gizmos.DrawCube(transform.position + new Vector3(0f, -0.5f, 0f), new Vector3(1f,1f,1f));
 		}
 	}
 

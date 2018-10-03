@@ -5,7 +5,7 @@ public class CubeSide : MonoBehaviour {
 
 	void OnValidate() {
 		if (CubeColor != null) {
-			GetComponent<MeshRenderer>().material = CubeColor.material;
+			//GetComponent<MeshRenderer>().material = CubeColor.material;
 		}	
 	}
 }
