@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 
 public class VolumeSlider : MonoBehaviour {
-	[SerializeField] UnityEngine.Audio.AudioMixer AudioMixer;
-	[SerializeField] string ExposedParameterName;
+	[SerializeField] AudioVolumeController AudioVolumeController;
 
 	private	UnityEngine.UI.Slider slider;
 
@@ -22,13 +21,11 @@ public class VolumeSlider : MonoBehaviour {
 
 	private void updateSlider() {
 		if (slider != null) {
-			float value;
-			AudioMixer.GetFloat(ExposedParameterName, out value);
-			slider.value = value;
+			slider.value = AudioVolumeController.Volume;
 		}
 	}
 
 	void SetVolume(float value) {
-		AudioMixer.SetFloat(ExposedParameterName, value);
+		AudioVolumeController.Volume = value;
 	}
 }

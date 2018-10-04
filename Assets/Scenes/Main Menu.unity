@@ -1212,8 +1212,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1343002969}
   m_HandleRect: {fileID: 2107295661}
   m_Direction: 0
-  m_MinValue: -60
-  m_MaxValue: 0
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1232,8 +1232,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db7f67ef3fcdcf49b66a26beb530bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioMixer: {fileID: 24100000, guid: 0c141aeabb2aa0d40a1e6b719db9fd55, type: 2}
-  ExposedParameterName: SFXVolume
+  AudioVolumeController: {fileID: 11400000, guid: 71eead1b0d31cfe409e32882c15391b0,
+    type: 2}
 --- !u!1 &511364775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,8 +1311,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1119858197}
   m_HandleRect: {fileID: 1653091882}
   m_Direction: 0
-  m_MinValue: -60
-  m_MaxValue: 0
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1331,8 +1331,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db7f67ef3fcdcf49b66a26beb530bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioMixer: {fileID: 24100000, guid: 0c141aeabb2aa0d40a1e6b719db9fd55, type: 2}
-  ExposedParameterName: MusicVolume
+  AudioVolumeController: {fileID: 11400000, guid: df491b962d3c0064ab1448366ae0c8f4,
+    type: 2}
 --- !u!1 &543455014
 GameObject:
   m_ObjectHideFlags: 0
@@ -3597,8 +3597,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 2120283638}
   m_HandleRect: {fileID: 185851053}
   m_Direction: 0
-  m_MinValue: -60
-  m_MaxValue: 0
+  m_MinValue: 0
+  m_MaxValue: 1
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -3617,8 +3617,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db7f67ef3fcdcf49b66a26beb530bb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AudioMixer: {fileID: 24100000, guid: 0c141aeabb2aa0d40a1e6b719db9fd55, type: 2}
-  ExposedParameterName: MasterVolume
+  AudioVolumeController: {fileID: 11400000, guid: be718414b2b49e341940bab001980267,
+    type: 2}
 --- !u!1 &2107295660
 GameObject:
   m_ObjectHideFlags: 0
