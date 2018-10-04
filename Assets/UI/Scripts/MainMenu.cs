@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour {
+	[SerializeField] SceneFader SceneFader;
 
 	public void StartGame() {
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		SceneFader.LoadNextScene();
 	}
 
 	public void Quit() {
