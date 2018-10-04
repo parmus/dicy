@@ -309,11 +309,6 @@ Prefab:
       propertyPath: m_Name
       value: BridgeTile (0, 2)
       objectReference: {fileID: 0}
-    - target: {fileID: 114119612348558758, guid: 6b2e9aa94d2bd5e4c99b6c62a67b754a,
-        type: 2}
-      propertyPath: startOpen
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b2e9aa94d2bd5e4c99b6c62a67b754a, type: 2}
   m_IsPrefabParent: 0

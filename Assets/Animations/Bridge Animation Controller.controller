@@ -33,6 +33,30 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &114107284519092668
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55dcc9816807c0409264f31b25936d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClip: {fileID: 8300000, guid: c2661e981b5e0274388b67ec44a6cd09, type: 3}
+--- !u!114 &114313293279390368
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d55dcc9816807c0409264f31b25936d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AudioClip: {fileID: 8300000, guid: 0d0ca1b19c125ae468f84f17cdc6d93c, type: 3}
 --- !u!114 &114331475701789486
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,6 +289,7 @@ AnimatorState:
   - {fileID: 1101369005108272390}
   m_StateMachineBehaviours:
   - {fileID: 114594186568566002}
+  - {fileID: 114313293279390368}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -292,6 +317,7 @@ AnimatorState:
   - {fileID: 1101700610946073236}
   m_StateMachineBehaviours:
   - {fileID: 114464158074877692}
+  - {fileID: 114107284519092668}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
