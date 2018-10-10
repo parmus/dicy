@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 [SelectionBase]
@@ -18,7 +19,7 @@ public class ButtonTile : Tile {
 		audioSource = GetComponent<AudioSource>();
 	}
 
-	public override void Enter(Cube cube) {
+	public override IEnumerator Enter(Cube cube) {
 		if (cube.BottomColor == TriggerColor) {
 			audioSource.PlayOneShot(TriggerSound);
 			foreach(var triggerable in Triggerables) {
@@ -27,6 +28,7 @@ public class ButtonTile : Tile {
     	} else {
 			audioSource.PlayOneShot(WrongColorSound);
 		}
+		yield return null;
 	}
 
 	void OnDrawGizmos() {

@@ -19,7 +19,7 @@ public class FragileTile : Tile {
 		crumbles = GetComponentInChildren<ParticleSystem>();
 	}
 
-	override public void Enter(Cube cube) {
+	override public IEnumerator Enter(Cube cube) {
 		audioSource.PlayOneShot(CrumbleSound);
 		crumbles.Play();
 		foreach(Rigidbody part in CrumblingParts) {
@@ -27,6 +27,7 @@ public class FragileTile : Tile {
 			part.AddTorque(Random.Range(-100f, 100f), 0f, Random.Range(-100f, 100f));
 			Destroy(part.gameObject, 5f);
 		}
+		yield return null;
 	}
 
 	override public void Leave(Cube cube) {

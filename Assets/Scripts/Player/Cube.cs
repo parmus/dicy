@@ -1,25 +1,17 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Cube : MonoBehaviour {
 
 	[Header("Movement")]
 	[SerializeField][Range(0.1f, 1f)] float RotationSpeed = 0.3f;
-	[SerializeField] Transform Graphics;
+	[SerializeField] public Transform Graphics;
 	[SerializeField] float MovementDelay = 0.2f;
-
-	[Header("Electricution")]
-	[SerializeField] AudioClip ElectricutionSound;
-	[SerializeField] GameObject ElectricutionVFX;
-	[SerializeField][Range(0.01f, 0.1f)] float ElectricutionShake = 0.05f;
 
 	static int CUBE_LAYER_MASK = 1 << 8;
 	static int WALKABLE_LAYER_MASK = 1 << 9;
 
 	private bool canMove = true;
-	private AudioSource audioSource;
-
     public CubeColor BottomColor {
         get {
             RaycastHit raycastHit;
@@ -34,47 +26,10 @@ public class Cube : MonoBehaviour {
         }
     }
 
-	public void RestartLevel() {
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-	}
-
-	public void Electricte() {
-		StartCoroutine(IElectricute());
-	}
-
-	void Start() {
-		audioSource = GetComponent<AudioSource>();
-	}
-
 	public void Move(Vector3 direction) {
 		if (canMove) {
 			StartCoroutine(IMove(direction));
 		}
-	}
-
-	private IEnumerator IElectricute() {
-		canMove = false;
-		float duration = ElectricutionSound.length;
-		audioSource.PlayOneShot(ElectricutionSound);
-		ElectricutionVFX.SetActive(true);
-
-		Vector3 startPos = Graphics.localPosition;
-
-		float elapsed_time = 0;
-		while(elapsed_time < duration) {
-			elapsed_time += Time.deltaTime;
-
-			Vector3 offset = new Vector3(
-				Random.Range(-ElectricutionShake, ElectricutionShake),
-				Random.Range(0, ElectricutionShake),
-				Random.Range(ElectricutionShake, ElectricutionShake)
-			);
-			Graphics.localPosition = startPos + offset;
-
-			yield return new WaitForEndOfFrame();
-		}
-
-		RestartLevel();
 	}
 
 	private IEnumerator IMove(Vector3 moveDirection){
@@ -113,13 +68,13 @@ public class Cube : MonoBehaviour {
 		transform.localPosition = transform.localPosition + moveDirection;
 		Graphics.localPosition = savedCubePosition;
 
-		canMove = true;
-
 		// Enter tile below
 		Tile enteringTile = getTileBelow();
 		if (enteringTile != null) {
-			enteringTile.Enter(this);
+			yield return StartCoroutine(enteringTile.Enter(this));
 		}
+
+		canMove = true;
 
 		yield return new WaitForSeconds(MovementDelay);
 	}
