@@ -2,10 +2,11 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Player : MonoBehaviour {
+public class Cube : MonoBehaviour {
 
+	[Header("Movement")]
 	[SerializeField][Range(0.1f, 1f)] float RotationSpeed = 0.3f;
-	[SerializeField] GameObject Cube;
+	[SerializeField] Transform Graphics;
 	[SerializeField] float MovementDelay = 0.2f;
 
 	[Header("Electricution")]
@@ -22,7 +23,7 @@ public class Player : MonoBehaviour {
     public CubeColor BottomColor {
         get {
             RaycastHit raycastHit;
-            if (Physics.Raycast(Cube.transform.position, Vector3.down, out raycastHit, 1f, CUBE_LAYER_MASK)) {
+            if (Physics.Raycast(Graphics.position, Vector3.down, out raycastHit, 1f, CUBE_LAYER_MASK)) {
                 CubeSide cubeSide = raycastHit.collider.gameObject.GetComponent<CubeSide>();
                 if (cubeSide != null) {
                     return cubeSide.CubeColor;
@@ -49,21 +50,9 @@ public class Player : MonoBehaviour {
 		audioSource = GetComponent<AudioSource>();
 	}
 
-	void Update () {
-#if UNITY_EDITOR
-		if (Input.GetKeyDown(KeyCode.R)) {
-			RestartLevel();
-		}
-#endif
-		
-		if (canMove){
-			float horizontal = Input.GetAxisRaw("Horizontal");
-			float vertical = Input.GetAxisRaw("Vertical");
-			if (Mathf.Abs(horizontal) > Mathf.Epsilon) {
-				StartCoroutine(IMove(Vector3.right * Mathf.Sign(horizontal)));
-			} else if (Mathf.Abs(vertical) > Mathf.Epsilon) {
-				StartCoroutine(IMove(Vector3.forward * Mathf.Sign(vertical)));
-			}
+	public void Move(Vector3 direction) {
+		if (canMove) {
+			StartCoroutine(IMove(direction));
 		}
 	}
 
@@ -73,7 +62,7 @@ public class Player : MonoBehaviour {
 		audioSource.PlayOneShot(ElectricutionSound);
 		ElectricutionVFX.SetActive(true);
 
-		Vector3 startPos = Cube.transform.localPosition;
+		Vector3 startPos = Graphics.localPosition;
 
 		float elapsed_time = 0;
 		while(elapsed_time < duration) {
@@ -84,7 +73,7 @@ public class Player : MonoBehaviour {
 				Random.Range(0, ElectricutionShake),
 				Random.Range(ElectricutionShake, ElectricutionShake)
 			);
-			Cube.transform.localPosition = startPos + offset;
+			Graphics.localPosition = startPos + offset;
 
 			yield return new WaitForEndOfFrame();
 		}
@@ -103,9 +92,9 @@ public class Player : MonoBehaviour {
 		}
 
 		Vector3 rotationAxis = Vector3.Cross(Vector3.up, moveDirection);
-		Vector3 savedCubePosition = Cube.transform.localPosition;
+		Vector3 savedCubePosition = Graphics.localPosition;
 
-		Quaternion startRotation = Cube.transform.localRotation;
+		Quaternion startRotation = Graphics.localRotation;
 		Quaternion endRotation = Quaternion.Euler(rotationAxis * 90f) * startRotation;
 
 		Vector3 rotationCenter = moveDirection * 0.5f;
@@ -116,17 +105,17 @@ public class Player : MonoBehaviour {
 			elapsed_time += Time.deltaTime;
 			float delta = Mathf.Clamp(elapsed_time / RotationSpeed, 0f, 1f);
 
-			Cube.transform.localRotation = Quaternion.Lerp(startRotation, endRotation, delta);
+			Graphics.localRotation = Quaternion.Lerp(startRotation, endRotation, delta);
 
 			float angle = Mathf.Lerp(3*(Mathf.PI/4f), Mathf.PI/4f, delta);
 			Vector3 rotationArm = (moveDirection * Mathf.Cos(angle)) + Vector3.up * Mathf.Sin(angle);
-			Cube.transform.localPosition = rotationCenter + rotationArm * cubeDiagonal;
+			Graphics.localPosition = rotationCenter + rotationArm * cubeDiagonal;
 
 			yield return new WaitForEndOfFrame();
 		}
 
 		transform.localPosition = transform.localPosition + moveDirection;
-		Cube.transform.localPosition = savedCubePosition;
+		Graphics.localPosition = savedCubePosition;
 
 		canMove = true;
 
@@ -140,12 +129,12 @@ public class Player : MonoBehaviour {
 	}
 
 	private bool isLegalMove(Vector3 moveDirection) {
-		return Physics.Raycast(Cube.transform.position + moveDirection, Vector3.down, 1f, WALKABLE_LAYER_MASK);
+		return Physics.Raycast(Graphics.position + moveDirection, Vector3.down, 1f, WALKABLE_LAYER_MASK);
 	}
 
     private Tile getTileBelow() {
 		RaycastHit raycastHit;
-		if (Physics.Raycast(Cube.transform.position, Vector3.down, out raycastHit, 1f, WALKABLE_LAYER_MASK)) {
+		if (Physics.Raycast(Graphics.position, Vector3.down, out raycastHit, 1f, WALKABLE_LAYER_MASK)) {
 			return raycastHit.collider.gameObject.GetComponent<Tile>();
 		}
 		return null;

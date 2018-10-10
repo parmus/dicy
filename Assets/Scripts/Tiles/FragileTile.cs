@@ -19,7 +19,7 @@ public class FragileTile : Tile {
 		crumbles = GetComponentInChildren<ParticleSystem>();
 	}
 
-	override public void Enter(Player player) {
+	override public void Enter(Cube cube) {
 		audioSource.PlayOneShot(CrumbleSound);
 		crumbles.Play();
 		foreach(Rigidbody part in CrumblingParts) {
@@ -29,7 +29,7 @@ public class FragileTile : Tile {
 		}
 	}
 
-	override public void Leave(Player player) {
+	override public void Leave(Cube cube) {
 		audioSource.PlayOneShot(BreakSound);
 		collider.enabled = false;
 		foreach(Rigidbody part in BreakingParts) {

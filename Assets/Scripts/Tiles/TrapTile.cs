@@ -5,9 +5,9 @@ public class TrapTile : Tile {
 	[SerializeField] CubeColor TrapColor;
 	[SerializeField] ParticleSystem Skulls;
 
-    public override void Enter(Player player) {
-		if (player.BottomColor == TrapColor) {
-			player.Electricte();
+    public override void Enter(Cube cube) {
+		if (cube.BottomColor == TrapColor) {
+			cube.Electricte();
 		}
     }
 

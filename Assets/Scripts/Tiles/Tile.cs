@@ -2,6 +2,6 @@
 
 [SelectionBase]
 public class Tile : MonoBehaviour {
-	virtual public void Enter(Player player) {}
-	virtual public void Leave(Player player) {}
+	virtual public void Enter(Cube cube) {}
+	virtual public void Leave(Cube cube) {}
 }

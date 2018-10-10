@@ -18,8 +18,8 @@ public class ButtonTile : Tile {
 		audioSource = GetComponent<AudioSource>();
 	}
 
-	public override void Enter(Player player) {
-		if (player.BottomColor == TriggerColor) {
+	public override void Enter(Cube cube) {
+		if (cube.BottomColor == TriggerColor) {
 			audioSource.PlayOneShot(TriggerSound);
 			foreach(var triggerable in Triggerables) {
 				if (triggerable) triggerable.Trigger();
