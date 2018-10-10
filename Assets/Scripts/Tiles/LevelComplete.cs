@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelComplete : Tile {
     public override void Enter(Cube cube) {
-        cube.LevelComplete();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

@@ -34,10 +34,6 @@ public class Cube : MonoBehaviour {
         }
     }
 
-	public void LevelComplete() {
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-	}
-
 	public void RestartLevel() {
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
