@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Round and round.unity
     guid: 66be8444ba4e2da47a6b48f0dbcd253b
   - enabled: 1
+    path: Assets/Scenes/In my way.unity
+    guid: 02da88dfdbfb15e44953f52dbc0f06f9
+  - enabled: 1
     path: Assets/Scenes/All The Bridges.unity
     guid: f04c734fafbd26a4a95565f0908f09b7
   - enabled: 1
