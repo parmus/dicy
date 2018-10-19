@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
 
-abstract public class Triggerable : MonoBehaviour {
+abstract public class TriggerableTile : Tile {
 	abstract public void Trigger();
 }

@@ -59,7 +59,7 @@ public class Level : MonoBehaviour {
 			if (obj == null) continue;
 			if (PrefabUtility.GetPrefabType(obj) != PrefabType.Prefab) continue;
 			GameObject gameObject = obj as GameObject;
-			if (gameObject.GetComponent<Tile>() == null && gameObject.GetComponent<BridgeTile>() == null) continue;
+			if (gameObject.GetComponent<Tile>() == null) continue;
 			tilePrefabs.Add(gameObject);
 		}
 
@@ -72,10 +72,6 @@ public class Level : MonoBehaviour {
 		foreach(Tile tile in GetComponentsInChildren(typeof(Tile))) {
 			string prefix = tile.GetType().Name;
 			tile.gameObject.name = System.String.Format("{0} ({1}, {2})", prefix, tile.transform.position.x, tile.transform.position.z);
-		}
-		foreach(Triggerable triggerable in GetComponentsInChildren(typeof(Triggerable))) {
-			string prefix = triggerable.GetType().Name;
-			triggerable.gameObject.name = System.String.Format("{0} ({1}, {2})", prefix, triggerable.transform.position.x, triggerable.transform.position.z);
 		}
 	}
 	#endregion

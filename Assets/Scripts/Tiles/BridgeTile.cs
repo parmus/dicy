@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [SelectionBase]
-public class BridgeTile : Triggerable {
+public class BridgeTile : TriggerableTile {
 	[SerializeField] bool startOpen = true;
 
 	private Animator animator;
