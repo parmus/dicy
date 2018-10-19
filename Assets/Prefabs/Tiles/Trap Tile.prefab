@@ -97,7 +97,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1068466668746068}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4079729099473568}
@@ -119,7 +119,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ca4c76d27103041468ede4a47b23ef6f, type: 2}
+  - {fileID: 2100000, guid: 5add77bdc9b3c1b4093a17c9f4060cc8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -213,7 +213,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -237,7 +237,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
 --- !u!114 &114109328304668900
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e95d8ae87908e41b118cf96b08d773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrapColor: {fileID: 0}
+  TrapColor: {fileID: 11400000, guid: d63d765096312b94dabbe86106f86a16, type: 2}
   Skulls: {fileID: 198885275341380760}
   ElectricutionSound: {fileID: 8300000, guid: f83a885011455ab41a4a59918988847b, type: 3}
   VFXPrefab: {fileID: 1655563075777428, guid: 705e14040d20bda4cb33849603a26670, type: 2}
