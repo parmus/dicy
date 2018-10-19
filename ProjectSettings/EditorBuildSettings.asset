@@ -42,5 +42,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Back and Forth.unity
     guid: 20f505dceb5ccc54e917d14766e2b6fd
   - enabled: 1
+    path: Assets/Scenes/Don't Touch Me.unity
+    guid: efe1922e5dbb0ef42b84a1a075105bb1
+  - enabled: 1
     path: Assets/Scenes/End Credits.unity
     guid: 046839b193584874a8ed65e9cc9e6c7b
