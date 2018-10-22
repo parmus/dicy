@@ -5,7 +5,7 @@ using UnityEngine;
 [SelectionBase]
 public class ButtonTile : Tile {
 	[SerializeField] CubeColor TriggerColor;
-	[SerializeField] List<TriggerableTile> Triggerables = new List<TriggerableTile>();
+	[SerializeField] public List<TriggerableTile> Triggerables = new List<TriggerableTile>();
 	[SerializeField] MeshRenderer Indicator;
 	[SerializeField] int MaterialIndex = 0;
 
