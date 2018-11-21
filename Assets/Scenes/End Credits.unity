@@ -170,8 +170,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "Developed by Martin Parm\n\n<u>Music\r</u>\n\"Patakas World\" by DL Sounds\n\n<u>Sound
     Effects\r</u>\nTabook, freesound.org\njobro, freesound.org\nDeathscyp, freesound.org\nTheBuilder15,
-    freesound.org\n\r\n<u>Fonts\r</u>\n\"Adventure\" by Pixel Sagas\n\n<u>Icons</u>\nGoogle
-    Material"
+    freesound.org\n\r\n<u>Fonts\r</u>\n\"Adventure\" by Pixel Sagas\n\"Keypad ADF\"
+    by Arkandis Digital Foundry\n\n<u>Icons</u>\nGoogle Material"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49af357c3d71eff4fa2419ad4d8a9509, type: 2}
   m_sharedMaterial: {fileID: 21225063902276828, guid: 49af357c3d71eff4fa2419ad4d8a9509,
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 34.75
+  m_fontSize: 32.7
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -239,12 +239,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 66895105}
-    characterCount: 232
+    characterCount: 273
     spriteCount: 0
-    spaceCount: 31
-    wordCount: 32
+    spaceCount: 37
+    wordCount: 38
     linkCount: 0
-    lineCount: 16
+    lineCount: 17
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0

@@ -26,3 +26,4 @@ Short puzzle game build using Unity 2017.4
 
 ### Fonts
 - "Adventure" by Pixel Sagas (https://www.dafont.com/adventure.font)
+- "Keypad ADF" by Arkandis Digital Foundry (https://www.1001fonts.com/keypad-adf-font.html)
