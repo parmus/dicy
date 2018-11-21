@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿#if UNITY_EDITOR
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
@@ -6,7 +7,6 @@ using UnityEditor;
 [ExecuteInEditMode]
 public class Level : MonoBehaviour {
 
-	#if UNITY_EDITOR
 	#region Scene view editor 
 	private List<GameObject> tilePrefabs = new List<GameObject>();
 
@@ -75,5 +75,5 @@ public class Level : MonoBehaviour {
 		}
 	}
 	#endregion
-	#endif
 }
+#endif
