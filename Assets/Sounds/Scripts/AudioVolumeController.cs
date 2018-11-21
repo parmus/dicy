@@ -24,7 +24,7 @@ public class AudioVolumeController : ScriptableObject {
                 if (AudioMixer != null) {
                     AudioMixer.GetFloat(ExposedParameterName, out value);
                 }
-                return Mathf.InverseLerp(MinValue, MaxValue, _volumeBeforeMuted);
+                return Mathf.InverseLerp(MinValue, MaxValue, value);
             }
         }
 
