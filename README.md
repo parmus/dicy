@@ -4,7 +4,7 @@ Dicy
 Short puzzle game build using Unity 2017.4
 
 ## Build requirements
-- Unity 2017.4.12f1 (or similar)
+- Unity 2017.4.15f1 (or similar)
 - Blender 2.79b (if re-exporting the models)
 
 ## Known issues
@@ -26,3 +26,4 @@ Short puzzle game build using Unity 2017.4
 
 ### Fonts
 - "Adventure" by Pixel Sagas (https://www.dafont.com/adventure.font)
+- "Keypad ADF" by Arkandis Digital Foundry (https://www.1001fonts.com/keypad-adf-font.html)
